@@ -8,12 +8,12 @@ namespace NeuralNetwork.UT.Objects
     public class ClassicNeuronTests
     {
         [Test]
-        public void SimpleTest()
+        public void ClassicNeuronComputeTest()
         {
             //given
             List<double> weigts = new List<double> { 1.0, 1.0 };
             ClassicNeuron neuron = new ClassicNeuron() {Weight = weigts };
-            List<double> input = new List<double> { 1, 1 };
+            List<double> input = new List<double> { 1.0, 1.0 };
             double bias = 1;
 
             //when
