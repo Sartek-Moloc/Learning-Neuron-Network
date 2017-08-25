@@ -1,0 +1,15 @@
+*.pdb
+*.cache
+*.exe
+*.manifest
+DeepLearning/.vs/DeepLearning/v14/.suo
+*.user
+*.txt
+DeepLearning/LayerFactory/obj/
+DeepLearning/LearningAlgorithm/obj/
+DeepLearning/Test/obj/
+DeepLearning/Test/bin/
+DeepLearning/LayerFactory/bin/
+DeepLearning/LearningAlgorithm/bin/
+DeepLearning/packages/
+DeepLearning/NeuralNetwork.UT/obj/
