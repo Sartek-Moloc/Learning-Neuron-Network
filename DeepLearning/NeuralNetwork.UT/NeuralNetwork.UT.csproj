@@ -43,8 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Objects\ClassicNeuronTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Factories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LayerFactory\NeuralNetwork.csproj">
+      <Project>{8BA93B12-FE04-4C0F-BA03-9F3B414ED8E1}</Project>
+      <Name>NeuralNetwork</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
