@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Objects\ClassicNeuronTests.cs" />
     <Compile Include="Objects\LayerTests.cs" />
+    <Compile Include="Objects\NetworkTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
