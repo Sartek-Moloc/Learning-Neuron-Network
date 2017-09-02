@@ -35,17 +35,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Objects\Implementations\ClassicNeuron.cs" />
-    <Compile Include="Objects\Interfaces\INetwork.cs" />
     <Compile Include="Objects\Implementations\LayerDescription.cs" />
     <Compile Include="Objects\Implementations\Network.cs" />
     <Compile Include="Factories\Implementations\SimpleLayerFactory.cs" />
-    <Compile Include="Factories\Interfaces\ILayerFactory.cs" />
-    <Compile Include="Objects\Interfaces\ILayer.cs" />
-    <Compile Include="Objects\Interfaces\INeuron.cs" />
-    <Compile Include="Factories\Interfaces\INeuronFactory.cs" />
     <Compile Include="Objects\Implementations\Layer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Factories\Implementations\SimpleNeuronFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NeuralNetworkInterfaces\NeuralNetworkInterfaces.csproj">
+      <Project>{0558ee5f-a8d7-487f-ae2e-7220887b1eb1}</Project>
+      <Name>NeuralNetworkInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

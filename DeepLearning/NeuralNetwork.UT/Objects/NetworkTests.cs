@@ -1,10 +1,10 @@
-﻿using NeuralNetwork.Factories.Interfaces;
-using NeuralNetwork.Objects.Implementations;
-using NeuralNetwork.Objects.Interfaces;
+﻿using NeuralNetwork.Objects.Implementations;
 using NUnit.Framework;
 using Rhino.Mocks;
 using System.Collections.Generic;
 using System.Linq;
+using NeuralNetworkInterfaces.Factories;
+using NeuralNetworkInterfaces.Objects;
 
 namespace NeuralNetwork.UT.Objects
 {
@@ -24,11 +24,26 @@ namespace NeuralNetwork.UT.Objects
                 new List<double> { 1.0, 2.0, 3.0, 4.0 },
             };
             firstLayer.Stub(layer => layer.Compute(Arg<IEnumerable<IEnumerable<double>>>.Is.Anything, Arg<int>.Is.Anything)).Return(firstLayerResults);
-            firstLayer.Stub(layer => layer.Neurons).Return(new List<INeuron>(4));
+            firstLayer.Stub(layer => layer.Neurons).Return(new List<INeuron>
+            {
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>()
+            });
             List<double> secondLayerResults = new List<double> { 1.0, 2.0, 3.0, 4.0, 5.0, 6.0 };
             ILayer secondLayer = MockRepository.GenerateMock<ILayer>();
             secondLayer.Stub(layer => layer.Compute(Arg<IEnumerable<IEnumerable<double>>>.Is.Anything)).Return(secondLayerResults);
-            secondLayer.Stub(layer => layer.Neurons).Return(new List<INeuron>(6));
+            secondLayer.Stub(layer => layer.Neurons).Return(new List<INeuron>
+            {
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+                MockRepository.GenerateMock<INeuron>(),
+            });
+            int expectedNeuronNumber = secondLayer.Neurons.Count();
             ILayerFactory layerFactory = MockRepository.GenerateMock<ILayerFactory>();
             layerFactory.Stub(lf => lf.ConstructLayer(
                 Arg<double>.Is.Anything, Arg<int>.Is.Anything, Arg<int>.Is.Anything, 
@@ -51,7 +66,7 @@ namespace NeuralNetwork.UT.Objects
 
             //then
             CollectionAssert.AreEqual(secondLayerResults, results);
-            firstLayer.AssertWasCalled(layer=>layer.Compute(Arg<IEnumerable<IEnumerable<double>>>.Is.Equal(inputs), Arg<int>.Is.Equal(6)));
+            firstLayer.AssertWasCalled(layer=>layer.Compute(Arg<IEnumerable<IEnumerable<double>>>.Is.Equal(inputs), Arg<int>.Is.Equal(expectedNeuronNumber)));
             secondLayer.AssertWasCalled(layer => layer.Compute(Arg<IEnumerable<IEnumerable<double>>>.Is.Equal(firstLayerResults)));
         }
 

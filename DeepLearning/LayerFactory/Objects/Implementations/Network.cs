@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NeuralNetwork.Objects.Interfaces;
+using NeuralNetworkInterfaces.Objects;
 
 namespace NeuralNetwork.Objects.Implementations
 {
@@ -15,7 +15,7 @@ namespace NeuralNetwork.Objects.Implementations
             {
                 return _layers[layerIndex].Compute(inputData);
             }
-            return Compute(_layers[layerIndex].Compute(inputData, _layers[layerIndex].Neurons.Count()),layerIndex+1);
+            return Compute(_layers[layerIndex].Compute(inputData, _layers[layerIndex+1].Neurons.Count()),layerIndex+1);
         }
 
         public Network(int inputCount ,IEnumerable<LayerDescription> layersDescription)

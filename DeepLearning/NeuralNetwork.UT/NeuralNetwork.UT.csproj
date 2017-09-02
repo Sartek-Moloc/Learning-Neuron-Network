@@ -59,6 +59,10 @@
       <Project>{8BA93B12-FE04-4C0F-BA03-9F3B414ED8E1}</Project>
       <Name>NeuralNetwork</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NeuralNetworkInterfaces\NeuralNetworkInterfaces.csproj">
+      <Project>{0558EE5F-A8D7-487F-AE2E-7220887B1EB1}</Project>
+      <Name>NeuralNetworkInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />

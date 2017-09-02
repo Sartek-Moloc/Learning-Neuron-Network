@@ -1,6 +1,6 @@
-﻿using NeuralNetwork.Factories.Interfaces;
-using NeuralNetwork.Objects.Implementations;
-using NeuralNetwork.Objects.Interfaces;
+﻿using NeuralNetwork.Objects.Implementations;
+using NeuralNetworkInterfaces.Factories;
+using NeuralNetworkInterfaces.Objects;
 
 namespace NeuralNetwork.Factories.Implementations
 {

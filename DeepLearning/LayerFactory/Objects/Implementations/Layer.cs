@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using NeuralNetwork.Factories.Interfaces;
-using NeuralNetwork.Objects.Interfaces;
+using NeuralNetworkInterfaces.Factories;
+using NeuralNetworkInterfaces.Objects;
 
 namespace NeuralNetwork.Objects.Implementations
 {

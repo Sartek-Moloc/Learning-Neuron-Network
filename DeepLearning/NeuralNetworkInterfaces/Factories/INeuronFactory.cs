@@ -1,6 +1,6 @@
-﻿using NeuralNetwork.Objects.Interfaces;
+﻿using NeuralNetworkInterfaces.Objects;
 
-namespace NeuralNetwork.Factories.Interfaces
+namespace NeuralNetworkInterfaces.Factories
 {
     public interface INeuronFactory
     {

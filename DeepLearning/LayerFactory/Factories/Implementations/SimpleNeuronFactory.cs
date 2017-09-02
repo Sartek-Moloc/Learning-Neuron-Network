@@ -1,8 +1,8 @@
 ﻿using System;
-using NeuralNetwork.Factories.Interfaces;
 using NeuralNetwork.Objects.Implementations;
-using NeuralNetwork.Objects.Interfaces;
 using System.Collections.Generic;
+using NeuralNetworkInterfaces.Factories;
+using NeuralNetworkInterfaces.Objects;
 
 namespace NeuralNetwork.Factories.Implementations
 {

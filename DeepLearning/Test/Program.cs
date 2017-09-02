@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using NeuralNetwork;
 using NeuralNetwork.Factories.Implementations;
 using NeuralNetwork.Objects.Implementations;
 

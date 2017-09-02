@@ -1,4 +1,4 @@
-﻿using NeuralNetwork.Factories.Interfaces;
+﻿using NeuralNetworkInterfaces.Factories;
 
 namespace NeuralNetwork.Objects.Implementations
 {

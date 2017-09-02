@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using NeuralNetwork.Objects.Interfaces;
+using NeuralNetworkInterfaces.Objects;
 
 namespace NeuralNetwork.Objects.Implementations
 {

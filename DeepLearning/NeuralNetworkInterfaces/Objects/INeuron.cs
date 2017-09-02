@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace NeuralNetwork.Objects.Interfaces
+namespace NeuralNetworkInterfaces.Objects
 {
     public interface INeuron
     {
